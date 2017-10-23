@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  
+  #RESTful
+  get 'posts'=> 'posts#index'
+  get 'posts/new' => 'posts#new'
+  get 'posts/:id' => 'posts#show'
+  post 'posts' =>'posts#create'
+  get 'posts/:id/edit' => "posts#edit"
+  put 'posts/:id' => 'posts#update' 
+  #RESTful 참고!
+  #<!--routes.rbdptj resoure :posts를 작성하면, post_controller.rb에서 작성한 7가지를 한번에 만들어 준다! get ~ << 7줄을 줄일 수 있겠지:)
+  #이후 각 index.html.erb에서 <%= link_to post.content, post %> 로 줄일 수 있음
+  
+  
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

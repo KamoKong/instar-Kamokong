@@ -1,0 +1,15 @@
+<h1>Posts Index</h1>
+
+<h3><a href="posts/new">New</a></h3>
+
+<div>
+<% @posts.each do |post| %>
+    
+    <div>
+    <a href="posts/<%=post.id %>">
+        <%= post.content %>
+    </a> 
+    </div>
+        
+<% end %>
+</div>
